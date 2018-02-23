@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Asset: <%= @asset.name %></h1>
 <%= form_for @asset,
              url: url_for(controller: "evaluate_assets", action: 'update', id: @asset.id) do |f| %>

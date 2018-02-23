@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p>Name: <%= @asset.name %></p>
+<p>Grade: <%= @asset.grade %></p>
+<p>Evaluation: <%= @asset.evaluation %></p>
+
 <%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Evaluate', url_for(controller: "evaluate_assets", action: 'show', id: @asset.id) %> |
 <%= link_to 'Back', assets_path %>

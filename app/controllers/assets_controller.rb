@@ -28,7 +28,8 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.save
-        format.html { redirect_to @asset, notice: 'Asset was successfully created.' }
+        format.html { redirect_to url_for(controller: "evaluate_assets", action: 'show', id: @asset.id), 
+                      notice: 'Asset was successfully created. Please evaluate it.' }
         format.json { render :show, status: :created, location: @asset }
       else
         format.html { render :new }
