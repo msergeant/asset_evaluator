@@ -1,0 +1,8 @@
+<h1>Asset: <%= @asset.name %></h1>
+<%= form_for @asset,
+             url: url_for(controller: "evaluate_assets", action: 'update', id: @asset.id) do |f| %>
+   <p><%= @question_text %></p>
+  <input type="hidden" name="question_id" value=<%= @question_id %>>
+  <input type="submit" name="response" value="yes">
+  <input type="submit" name="response" value="no">
+<% end %>
