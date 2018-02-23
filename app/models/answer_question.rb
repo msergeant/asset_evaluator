@@ -13,7 +13,7 @@ class AnswerQuestion
       @asset.grade = response.split('=')[1]
       {"complete" => true}
     else
-      {"complete" => false, "next_question" => "second_question"}
+      {"complete" => false}
     end
   end
 end
