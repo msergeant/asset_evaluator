@@ -70,6 +70,6 @@ class AssetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def asset_params
-      params.fetch(:asset, {})
+      params.require(:asset).permit(:name)
     end
 end
